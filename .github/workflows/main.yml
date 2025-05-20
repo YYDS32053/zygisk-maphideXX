@@ -1,4 +1,4 @@
-name: Build zygisk module
+Name: Build zygisk module
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/upload-artifact@v4
+      uses: actions/checkout@v4
       with:
         submodules: 'recursive'
         fetch-depth: 0
@@ -28,7 +28,7 @@ jobs:
         chmod 777 ./build.sh
         ./build.sh
     - name: Upload release
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: zygisk-module-release
         path: out/magisk-module
