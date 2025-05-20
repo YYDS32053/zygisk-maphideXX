@@ -1,4 +1,4 @@
-Name: Build zygisk module
+name: Build zygisk module
 
 on:
   workflow_dispatch:
